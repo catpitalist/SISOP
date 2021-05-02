@@ -1,5 +1,5 @@
 #if !defined(UTIL_H)
-#define UTIL_h 1
+#define UTIL_H 1
 
 #include <stdio.h>
 #include <string.h>
