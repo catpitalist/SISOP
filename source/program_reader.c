@@ -22,8 +22,9 @@ int main(){
     printf("Next test:\n");
     while(file_iter_next(iter, t)){
         printf("%s - %d\n", t->content, t->type);
+        dealloc_token(t);
+        t = malloc(sizeof(struct token));
     }
-    dealloc_token(t);
     dealloc_file_iter(iter);
     return 0;
 }
