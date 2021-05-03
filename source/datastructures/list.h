@@ -20,8 +20,10 @@ void add_to_beginning(struct list *ls, void *data);
 struct list_iterator{
     struct list *ls;
     struct node *next;
+    bool done;
 };
 
 void init_list_iterator(struct list_iterator *ls_i, struct list *ls);
 void dealloc_list_iterator(struct list_iterator *ls_i);
 bool list_iterator_next(struct list_iterator);
+bool is_done(struct list_iterator *ls_i);
